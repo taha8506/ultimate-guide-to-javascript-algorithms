@@ -6,10 +6,17 @@ don't. E.g
 */
 
 
+//direct comparison
+function isAnagram(stringA, stringB) {
+    const sanitizeString = function (str) {
+        return str.toLowerCase().replace(/[^a-z\d]/g, '').split('').sort().join('');
+    }
+    return sanitizeString(stringA) == sanitizeString(stringB)
+}
 
+//Character Map COmparison
 function isAnagram(stringA, stringB) {
     // Code goes here
 }
-
 
 module.exports = isAnagram
